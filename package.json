@@ -19,10 +19,7 @@
   "files": [
     "collaborators.md",
     "bin",
-    "docs/*.md",
-    "NEWS.md",
-    "src",
-    "usage.txt"
+    "src"
   ],
   "dependencies": {
     "@electron/get": "^1.6.0",
