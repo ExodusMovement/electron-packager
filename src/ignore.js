@@ -88,11 +88,7 @@ function userIgnoreFilter (opts) {
     }
 
     if (pruner && name.startsWith('/node_modules/')) {
-      if (await prune.isModule(file)) {
-        return pruner.pruneModule(name)
-      } else {
-        return ignoreFunc(name)
-      }
+      throw new Error('Pruning is disabled in this version')
     }
 
     return ignoreFunc(name)
