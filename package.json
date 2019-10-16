@@ -1,6 +1,6 @@
 {
-  "name": "electron-packager",
-  "version": "13.1.1",
+  "name": "@exodus/electron-packager",
+  "version": "13.1.1-exodus1",
   "description": "Customize and package your Electron app with OS-specific bundles (.app, .exe, etc.) via JS or CLI",
   "main": "index.js",
   "bin": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/electron-userland/electron-packager.git"
+    "url": "git+https://github.com/ExodusMovement/electron-packager.git"
   },
   "author": "max ogden",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/electron-userland/electron-packager/issues"
+    "url": "https://github.com/ExodusMovement/electron-packager/issues"
   },
-  "homepage": "https://github.com/electron-userland/electron-packager",
+  "homepage": "https://github.com/ExodusMovement/electron-packager",
   "dependencies": {
     "asar": "^1.0.0",
     "debug": "^4.0.1",
