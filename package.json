@@ -20,7 +20,7 @@
   "files": [
     "collaborators.md",
     "bin",
-    "src"
+    "src/**/*.js"
   ],
   "dependencies": {
     "@electron/get": "^1.6.0",
