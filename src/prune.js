@@ -4,6 +4,13 @@ const common = require('./common')
 const fs = require('fs-extra')
 const path = require('path')
 
+const ELECTRON_MODULES = [
+  'electron',
+  'electron-nightly',
+  'electron-prebuilt',
+  'electron-prebuilt-compile'
+]
+
 class Pruner {
   constructor (dir) {
     throw new Error('Pruning is disabled in this version')
