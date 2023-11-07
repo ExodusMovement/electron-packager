@@ -12,8 +12,7 @@ function updateWineMissingException (err) {
     err.message = `Could not find "${binary}" on your system.\n\n` +
       'Wine is required to use the appCopyright, appVersion, buildVersion, icon, and \n' +
       'win32metadata parameters for Windows targets.\n\n' +
-      `Make sure that the "${binary}" executable is in your PATH.\n\n` +
-      'See https://github.com/electron/electron-packager#building-windows-apps-from-non-windows-platforms for details.'
+      'See https://github.com/electron/packager#building-windows-apps-from-non-windows-platforms for details.'
   }
 
   return err
