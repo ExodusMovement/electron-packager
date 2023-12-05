@@ -1,7 +1,7 @@
 'use strict'
 
 const config = require('./config.json')
-const packager = require('..')
+const { packager } = require('../src')
 const path = require('path')
 const test = require('ava')
 const util = require('./_util')
@@ -16,7 +16,7 @@ const win32Opts = {
 }
 
 function generateRceditOptionsSansIcon (opts) {
-  return new win32.App(opts).generateRceditOptionsSansIcon()
+  return new WindowsApp(opts).generateRceditOptionsSansIcon()
 }
 
 function generateVersionStringTest (metadataProperties, extraOpts, expectedValues, assertionMsgs) {
