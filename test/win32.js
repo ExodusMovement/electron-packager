@@ -1,13 +1,12 @@
 'use strict'
 
 const config = require('./config.json')
-const { packager } = require('../src')
+const { packager } = require('../dist')
 const path = require('path')
 const test = require('ava')
 const _ = require('lodash')
 const util = require('./_util')
-const win32 = require('../src/win32')
-const { WindowsApp } = require('../src/win32')
+const { WindowsApp } = require('../dist/win32')
 const { load: loadResedit } = require('resedit/cjs')
 const fs = require('fs-extra')
 

@@ -1,7 +1,7 @@
 import { baseTempDir, debug, ensureArray, generateFinalBasename, normalizePath } from './common';
 import junk from 'junk';
 import path from 'path';
-import { isModule, Pruner } from './prune';
+import { Pruner } from './prune';
 import { officialPlatformArchCombos } from './targets';
 import { ComboOptions, Options } from './types';
 import { CopyFilterAsync } from 'fs-extra';
@@ -93,11 +93,7 @@ export function userPathFilter(opts: ComboOptions): CopyFilterAsync {
     }
 
     if (pruner && name.startsWith('/node_modules/')) {
-      if (await isModule(file)) {
-        return pruner.pruneModule(name);
-      } else {
-        return filterFunc(name);
-      }
+      throw new Error('Pruning is disabled in this version');
     }
 
     return filterFunc(name);
