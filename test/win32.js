@@ -6,13 +6,10 @@ const path = require('path')
 const test = require('ava')
 const _ = require('lodash')
 const util = require('./_util')
-<<<<<<< HEAD
 const win32 = require('../src/win32')
-=======
-const { WindowsApp } = require('../dist/win32')
+const { WindowsApp } = require('../src/win32')
 const { load: loadResedit } = require('resedit/cjs')
 const fs = require('fs-extra')
->>>>>>> d9655d4 (feat: remove dependency on rcedit to allow x-platform exe resource modding (#1696))
 
 const win32Opts = {
   name: 'basicTest',
@@ -135,39 +132,6 @@ function setCompanyNameTest (companyName) {
                                    'Company name should match win32metadata value')
 }
 
-<<<<<<< HEAD
-for (const wineBinary of ['wine', 'wine64']) {
-  test(`better error message when ${wineBinary} is not found`, t => {
-    let err = Error(`spawn ${wineBinary} ENOENT`)
-    err.code = 'ENOENT'
-    err.syscall = `spawn ${wineBinary}`
-
-    t.is(err.message, `spawn ${wineBinary} ENOENT`)
-    err = win32.updateWineMissingException(err)
-    t.not(err.message, `spawn ${wineBinary} ENOENT`)
-  })
-}
-
-test('error message unchanged when error not about wine/wine64', t => {
-  let errNotEnoent = Error('unchanged')
-  errNotEnoent.code = 'ESOMETHINGELSE'
-  errNotEnoent.syscall = 'spawn wine'
-
-  t.is(errNotEnoent.message, 'unchanged')
-  errNotEnoent = win32.updateWineMissingException(errNotEnoent)
-  t.is(errNotEnoent.message, 'unchanged')
-
-  let errNotSpawnWine = Error('unchanged')
-  errNotSpawnWine.code = 'ENOENT'
-  errNotSpawnWine.syscall = 'spawn foo'
-
-  t.is(errNotSpawnWine.message, 'unchanged')
-  errNotSpawnWine = win32.updateWineMissingException(errNotSpawnWine)
-  t.is(errNotSpawnWine.message, 'unchanged')
-})
-
-=======
->>>>>>> d9655d4 (feat: remove dependency on rcedit to allow x-platform exe resource modding (#1696))
 test('win32metadata defaults', t => {
   const opts = { name: 'Win32 App' }
   const rcOpts = generateReseditOptionsSansIcon(opts)

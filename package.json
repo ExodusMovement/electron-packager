@@ -20,10 +20,7 @@
   "files": [
     "collaborators.md",
     "bin",
-    "docs/*.md",
-    "dist",
-    "src/targets.js",
-    "usage.txt"
+    "src/**/*.js"
   ],
   "dependencies": {
     "@electron/asar": "^3.2.13",
